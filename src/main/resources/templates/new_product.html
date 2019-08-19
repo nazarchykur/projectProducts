@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new product</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body class="page">
+<div align="center">
+    <h1>Create New Product</h1>
+    <br/>
+    <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+
+        <table class="table-products">
+            <tr>
+                <td>Product Name:</td>
+                <td><input type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td><input type="text" th:field="*{category}"/></td>
+            </tr>
+            <tr>
+                <td>Date Of Manufacture:</td>
+                <td><input type="date" th:field="*{dateOfManufacture}"/></td>
+            </tr>
+            <tr>
+                <td>Expiration Date:</td>
+                <td><input type="date" th:field="*{expirationDate}"/></td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td><input type="number" th:field="*{quantity}"/></td>
+            </tr>
+            <tr>
+                <td>price:</td>
+                <td><input type="number" th:field="*{price}"/></td>
+            </tr>
+            <tr>
+                <td>Vendor:</td>
+                <td><input type="text" th:field="*{vendor}"/></td>
+            </tr>
+            <tr>
+                <td>Vendor's Phone:</td>
+                <td><input type="text" th:field="*{vendorPhone}"/></td>
+            </tr>
+            <tr>
+                <td>Delivery Date:</td>
+                <td><input type="date" th:field="*{deliveryDate}"/></td>
+            </tr>
+            <tr>
+                <td>Warehouse Number:</td>
+                <td><input type="number" th:field="*{warehouseNumber}"/></td>
+            </tr>
+            <tr>
+                <td>Brief Description:</td>
+                <td><input type="text" th:field="*{briefDescription}"/></td>
+            </tr>
+            <tr>
+                <td>Annotation Box:</td>
+                <td><input type="text" th:field="*{annotationBox}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

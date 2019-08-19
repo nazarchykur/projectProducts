@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body class="page">
+    <div align="center">
+        <h1>Product manager</h1>
+        <a class="btn-add-product" href="/new">Create new product</a>
+        <table class="table-products">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Date of manufacture</th>
+                    <th>Expiration date</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Vendor</th>
+                    <th>Vendor's phone</th>
+                    <th>Delivery date</th>
+                    <th>Warehouse number</th>
+                    <th>Brief description</th>
+                    <th>Annotation box</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${productList}">
+                    <td th:text="${product.id}">Product ID</td>
+                    <td th:text="${product.name}">Name</td>
+                    <td th:text="${product.category}">category</td>
+                    <td th:text="${product.dateOfManufacture}">dateOfManufacture</td>
+                    <td th:text="${product.expirationDate}">expirationDate</td>
+                    <td th:text="${product.quantity}">quantity</td>
+                    <td th:text="${product.price}">price</td>
+                    <td th:text="${product.vendor}">vendor</td>
+                    <td th:text="${product.vendorPhone}">vendorPhone</td>
+                    <td th:text="${product.deliveryDate}">deliveryDate</td>
+                    <td th:text="${product.warehouseNumber}">warehouseNumber</td>
+                    <td th:text="${product.briefDescription}">briefDescription</td>
+                    <td th:text="${product.annotationBox}">annotationBox</td>
+                    <td>
+                        <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
