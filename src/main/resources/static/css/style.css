@@ -1,34 +1,75 @@
-.page{
-    background: rgba(212,228,239,1);
-    background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+.page {
+    background: rgba(212, 228, 239, 1);
+    background: linear-gradient(to right, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
 }
 
-.btn-add-product {
-    box-shadow:inset 0px 1px 0px 0px #97c4fe;
-    background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
-    background-color:#3d94f6;
-    border-radius:6px;
-    border:1px solid #337fed;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #1570cd;
+.btn {
+    border-radius: 6px;
+    border: 1px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight:normal;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #1570cd;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.btn--margin-bottom {
     margin-bottom: 30px;
 }
-.btn-add-product:hover {
-    background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
-    background-color:#1e62d0;
+
+.btn__add-product {
+    padding: 6px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: inset 0px 1px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
 }
-.btn-add-product:active {
-    position:relative;
-    top:1px;
+
+.btn__add-product:hover {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
 }
-.table-products{
+
+
+.btn__edit{
+    box-shadow:3px 4px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color:#ffec64;
+    border-radius:8px;
+    border:1px solid #ffaa22;
+    padding:3px 8px;
+    text-shadow:0px 1px 0px #ffee66;
+    padding-bottom: 3px;
+}
+.btn__edit:hover {
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color:#ffab23;
+}
+
+.btn__delete {
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    background-color: #c62d1f;
+    border-radius: 8px;
+    border: 1px solid #d02718;
+    padding:3px 8px;
+    text-shadow: 0px 1px 0px #810e05;
+}
+
+.btn__delete:hover {
+    background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+    background-color: #f24437;
+}
+
+.table-products {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
     max-width: 90%;
@@ -36,27 +77,33 @@
     border-collapse: collapse;
     padding: 20px;
 }
+
 .table-products td, .table-products th {
     border: 1px solid #AAAAAA;
     padding: 5px;
 }
+
 .table-products tbody td {
     font-size: 13px;
 }
+
 .table-products tr:nth-child(even) {
     background: #D0E4F5;
 }
+
 .table-products thead {
     background: #1C6EA4;
     background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
     border-bottom: 2px solid #444444;
 }
+
 .table-products thead th {
     font-size: 13px;
     font-weight: bold;
     color: #FFFFFF;
     border-left: 2px solid #D0E4F5;
 }
+
 .table-products thead th:first-child {
     border-left: none;
 }

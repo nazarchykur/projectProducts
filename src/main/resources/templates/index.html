@@ -8,8 +8,9 @@
 <body class="page">
     <div align="center">
         <h1>Product manager</h1>
-        <a class="btn-add-product" href="/new">Create new product</a>
-        <table class="table-products">
+        <a class="btn btn__add-product btn--margin-bottom" href="/new">Create new product</a>
+<!--        <input type="text" th:field="*{id}" id="input-search" onkeyup="myFunction()" placeholder="Search for names..">-->
+        <table class="table-products" >
             <thead>
                 <tr>
                     <th>Product ID</th>
@@ -44,14 +45,20 @@
                     <td th:text="${product.briefDescription}">briefDescription</td>
                     <td th:text="${product.annotationBox}">annotationBox</td>
                     <td>
-                        <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                        <a class="btn btn__edit" th:href="@{'/edit/' + ${product.id}}">Edit</a>
                         &nbsp;&nbsp;&nbsp;
-                        <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                        <a class="btn btn__delete" th:href="@{'/delete/' + ${product.id}}">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
 
     </div>
+<!--    <script type="text/javascript" th:src="@{/css/js/scripts.js}"></script>-->
+
+
+
+
+
 </body>
 </html>
