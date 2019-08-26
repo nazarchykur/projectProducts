@@ -10,25 +10,24 @@
         <h1>Product manager</h1>
         <a class="btn btn__add-product btn--margin-bottom" href="/new">Create new product</a>
 
-        <table class="table-products" id="table-products">
+        <table class="table-products" id="tableProducts">
             <thead>
                 <tr>
-                    <th class="sorting">Product ID</th>
-                    <th class="sorting">Name</th>
-                    <th class="sorting">Category</th>
-                    <th class="sorting">Date of manufacture</th>
-                    <th class="sorting">Expiration date</th>
-                    <th class="sorting">Quantity</th>
-                    <th class="sorting">Price</th>
-                    <th class="sorting">Vendor</th>
-                    <th class="sorting">Vendor's phone</th>
-                    <th class="sorting">Delivery date</th>
-                    <th class="sorting">Warehouse number</th>
-                    <th class="sorting">Brief description</th>
-                    <th class="sorting">Annotation box</th>
+                    <th class="">Product ID</th>
+                    <th class="">Name</th>
+                    <th class="">Category</th>
+                    <th class="tert">Date of manufacture</th>
+                    <th class="">Expiration date</th>
+                    <th class="">Quantity</th>
+                    <th class="">Price</th>
+                    <th class="">Vendor</th>
+                    <th class="">Vendor's phone</th>
+                    <th class="">Delivery date</th>
+                    <th class="">Warehouse number</th>
+                    <th >Brief description</th>
+                    <th >Annotation box</th>
                     <th>Actions</th>
                 </tr>
-
             </thead>
             <tbody>
                 <tr th:each="product : ${productList}">

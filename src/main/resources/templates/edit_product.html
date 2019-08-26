@@ -20,51 +20,51 @@
 				</tr>
 				<tr>
 					<td>Product Name:</td>
-					<td><input type="text" th:field="*{name}"/></td>
+					<td><input type="text" th:field="*{name}" pattern="[a-zA-Z0-9\s]{0,16}" required /></td>
 				</tr>
 				<tr>
 					<td>Category:</td>
-					<td><input type="text" th:field="*{category}"/></td>
+					<td><input type="text" th:field="*{category}" pattern="[a-zA-Z0-9\s]{0,16}" required /></td>
 				</tr>
 				<tr>
 					<td>Date Of Manufacture:</td>
-					<td><input type="date" th:field="*{dateOfManufacture}"/></td>
+					<td><input type="date" th:field="*{dateOfManufacture}" required /></td>
 				</tr>
 				<tr>
 					<td>Expiration Date:</td>
-					<td><input type="date" th:field="*{expirationDate}"/></td>
+					<td><input type="date" th:field="*{expirationDate}" required /></td>
 				</tr>
 				<tr>
 					<td>Quantity:</td>
-					<td><input type="number" th:field="*{quantity}"/></td>
+					<td><input type="number" th:field="*{quantity}" min="0" required /></td>
 				</tr>
 				<tr>
 					<td>price:</td>
-					<td><input type="number" th:field="*{price}"/></td>
+					<td><input type="number" th:field="*{price}" min="0" required /></td>
 				</tr>
 				<tr>
 					<td>Vendor:</td>
-					<td><input type="text" th:field="*{vendor}"/></td>
+					<td><input type="text" th:field="*{vendor}" pattern="[a-zA-Z0-9\s]{0,16}" required /></td>
 				</tr>
 				<tr>
 					<td>Vendor's Phone:</td>
-					<td><input type="tel" th:field="*{vendorPhone}" pattern="[0-9]{5}" /></td>
+					<td><input type="tel" th:field="*{vendorPhone}" pattern="[0-9]{5}" required /></td>
 				</tr>
 				<tr>
 					<td>Delivery Date:</td>
-					<td><input type="date" th:field="*{deliveryDate}"/></td>
+					<td><input type="date" th:field="*{deliveryDate}" required /></td>
 				</tr>
 				<tr>
 					<td>Warehouse Number:</td>
-					<td><input type="number" th:field="*{warehouseNumber}"/></td>
+					<td><input type="number" th:field="*{warehouseNumber}" min="1" required /></td>
 				</tr>
 				<tr>
 					<td>Brief Description:</td>
-					<td><input type="text" th:field="*{briefDescription}"/></td>
+					<td><input type="text" th:field="*{briefDescription}" pattern="[a-zA-Z0-9\s]{0,25}" required /></td>
 				</tr>
 				<tr>
 					<td>Annotation Box:</td>
-					<td><input type="text" th:field="*{annotationBox}"/></td>
+					<td><input type="text" th:field="*{annotationBox}" pattern="[a-zA-Z0-9\s]{0,25}" required /></td>
 				</tr>
 				<tr>
 					<td colspan="2">

@@ -1,6 +1,6 @@
 .page {
-    background: rgb(225, 226, 226);
-    background: linear-gradient(to right, rgb(224, 255, 252) 0%, rgb(255, 213, 158) 100%);
+    background: rgb(209, 212, 212);
+    background: linear-gradient(to right, rgb(191, 216, 214) 0%, rgb(208, 196, 185) 100%);
     max-width: 100%;
 }
 
@@ -40,18 +40,18 @@
 }
 
 .btn__edit{
-    box-shadow:3px 4px 0px 0px #fff6af;
-    background-color:#ffec64;
-    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    box-shadow:3px 4px 0px 0px #f1ee60;
+    background-color: #f5e263;
+    background:linear-gradient(to bottom, #f9e65f 5%, #f5a522 100%);
     border-radius:8px;
     border:1px solid #ffaa22;
     padding:3px 8px;
-    text-shadow:0px 1px 0px #ffee66;
+    text-shadow:0px 1px 0px #e8d761;
     margin-bottom: 7px;
 }
 .btn__edit:hover {
-    background-color:#ffab23;
-    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+    background:linear-gradient(to bottom, #ffa927 5%, #f6e36e 100%);
 }
 
 .btn__delete {
@@ -110,8 +110,8 @@
 }
 
 .table-products thead {
-    background: #5ab7f5;
-    background: linear-gradient(to bottom, #c6dbe8 0%, #3e7ea9 66%, #5d86a0 100%);
+    background: #557d98;
+    background: linear-gradient(to bottom, #c6dbe8 0%, #295967 66%, #435d6d 100%);
     border-bottom: 2px solid #444444;
 }
 
@@ -159,12 +159,12 @@
 }
 
 span .paginate_button {
-    background-color: #1e8a29;
+    background-color: #557d98;;
     color: white;
     padding: 4px;
     margin-right: 5px;
     border-radius: 4px;
 }
 .paginate_button:hover{
-    background-color: #18ba8e;
+    background-color: #6489a3;
 }

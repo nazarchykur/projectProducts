@@ -14,23 +14,23 @@
         <table class="table-products">
             <tr>
                 <td>Product Name:</td>
-                <td><input type="text" th:field="*{name}" pattern="[a-zA-Z0-9\s]{0,16}" maxLength='16' th:value="Product" required /></td>
+                <td><input type="text" th:field="*{name}" pattern="[a-zA-Z0-9\s]{0,16}" maxLength='16' required /></td>
             </tr>
             <tr>
                 <td>Category:</td>
-                <td><input type="text" th:field="*{category}" required /></td>
+                <td><input type="text" th:field="*{category}" pattern="[a-zA-Z0-9\s]{0,16}" required /></td>
             </tr>
             <tr>
                 <td>Date Of Manufacture:</td>
-                <td><input type="date" th:field="*{dateOfManufacture}" th:value="2017-06-01" required /></td>
+                <td><input type="date" th:field="*{dateOfManufacture}" required /></td>
             </tr>
             <tr>
                 <td>Expiration Date:</td>
-                <td><input type="date" th:field="*{expirationDate}" min="2015-08-15" required /></td>
+                <td><input type="date" th:field="*{expirationDate}" required /></td>
             </tr>
             <tr>
                 <td>Quantity:</td>
-                <td><input type="number" th:field="*{quantity}" min="0" oninput="validity.valid||(value='');" required /></td>
+                <td><input type="number" th:field="*{quantity}" min="0" required /></td>
             </tr>
             <tr>
                 <td>price:</td>
@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td>Vendor:</td>
-                <td><input type="text" th:field="*{vendor}" required /></td>
+                <td><input type="text" th:field="*{vendor}" pattern="[a-zA-Z0-9\s]{0,16}" required /></td>
             </tr>
             <tr>
                 <td>Vendor's Phone:</td>
@@ -54,11 +54,11 @@
             </tr>
             <tr>
                 <td>Brief Description:</td>
-                <td><input type="text" th:field="*{briefDescription}" th:value="default" required /></td>
+                <td><input type="text" th:field="*{briefDescription}" pattern="[a-zA-Z0-9\s]{0,25}" required /></td>
             </tr>
             <tr>
                 <td>Annotation Box:</td>
-                <td><input type="text" th:field="*{annotationBox}" th:value="default" required /></td>
+                <td><input type="text" th:field="*{annotationBox}" pattern="[a-zA-Z0-9\s]{0,25}" required /></td>
             </tr>
             <tr>
                 <td colspan="2">
