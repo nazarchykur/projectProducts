@@ -6,82 +6,79 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body class="page">
-    <div align="center">
-        <h1>Product manager</h1>
-        <a class="btn btn__add-product btn--margin-bottom" href="/new">Create new product</a>
+<div align="center">
+    <h1>Product manager</h1>
+    <a class="btn btn__add-product btn--margin-bottom" href="/new">Create new product</a>
 
-        <table class="table-products" id="tableProducts">
-            <thead>
-                <tr>
-                    <th class="">Product ID</th>
-                    <th class="">Name</th>
-                    <th class="">Category</th>
-                    <th class="tert">Date of manufacture</th>
-                    <th class="">Expiration date</th>
-                    <th class="">Quantity</th>
-                    <th class="">Price</th>
-                    <th class="">Vendor</th>
-                    <th class="">Vendor's phone</th>
-                    <th class="">Delivery date</th>
-                    <th class="">Warehouse number</th>
-                    <th >Brief description</th>
-                    <th >Annotation box</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="product : ${productList}">
-                    <td th:text="${product.id}">Product ID</td>
-                    <td th:text="${product.name}">Name</td>
-                    <td th:text="${product.category}">category</td>
-                    <td th:text="${product.dateOfManufacture}">dateOfManufacture</td>
-                    <td th:text="${product.expirationDate}">expirationDate</td>
-                    <td th:text="${product.quantity}">quantity</td>
-                    <td th:text="${product.price}">price</td>
-                    <td th:text="${product.vendor}">vendor</td>
-                    <td th:text="${product.vendorPhone}">vendorPhone</td>
-                    <td th:text="${product.deliveryDate}">deliveryDate</td>
-                    <td th:text="${product.warehouseNumber}">warehouseNumber</td>
-                    <td th:text="${product.briefDescription}">briefDescription</td>
-                    <td th:text="${product.annotationBox}">annotationBox</td>
-                    <td>
-                        <a class="btn btn__edit" th:href="@{'/edit/' + ${product.id}}">Edit</a>
+    <table class="table-products" id="tableProducts">
+        <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Date of manufacture</th>
+            <th>Expiration date</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Vendor</th>
+            <th>Vendor's phone</th>
+            <th>Delivery date</th>
+            <th>Warehouse number</th>
+            <th>Brief description</th>
+            <th>Annotation box</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${productList}">
+            <td th:text="${product.id}">Product ID</td>
+            <td th:text="${product.name}">Name</td>
+            <td th:text="${product.category}">category</td>
+            <td th:text="${product.dateOfManufacture}">dateOfManufacture</td>
+            <td th:text="${product.expirationDate}">expirationDate</td>
+            <td th:text="${product.quantity}">quantity</td>
+            <td th:text="${product.price}">price</td>
+            <td th:text="${product.vendor}">vendor</td>
+            <td th:text="${product.vendorPhone}">vendorPhone</td>
+            <td th:text="${product.deliveryDate}">deliveryDate</td>
+            <td th:text="${product.warehouseNumber}">warehouseNumber</td>
+            <td th:text="${product.briefDescription}">briefDescription</td>
+            <td th:text="${product.annotationBox}">annotationBox</td>
+            <td>
+                <a class="btn btn__edit" th:href="@{'/edit/' + ${product.id}}">Edit</a>
 
-                        <a class="btn btn__delete" th:href="@{'/delete/' + ${product.id}}" onclick="return confirm('Are you sure delete this item?')">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-<!--            <tfoot>-->
-<!--            <tr>-->
-<!--                <th></th>-->
-<!--                <th>Name</th>-->
-<!--                <th>Category</th>-->
-<!--                <th>Date of manufacture</th>-->
-<!--                <th>Expiration date</th>-->
-<!--                <th></th>-->
-<!--                <th></th>-->
-<!--                <th>Vendor</th>-->
-<!--                <th></th>-->
-<!--                <th>Delivery date</th>-->
-<!--                <th>Warehouse number</th>-->
-<!--                <th></th>-->
-<!--                <th></th>-->
-<!--            </tr>-->
-<!--            </tfoot>-->
-        </table>
+                <a class="btn btn__delete" th:href="@{'/delete/' + ${product.id}}"
+                   onclick="return confirm('Are you sure delete this item?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+        <!--            <tfoot>-->
+        <!--            <tr>-->
+        <!--                <th></th>-->
+        <!--                <th>Name</th>-->
+        <!--                <th>Category</th>-->
+        <!--                <th>Date of manufacture</th>-->
+        <!--                <th>Expiration date</th>-->
+        <!--                <th></th>-->
+        <!--                <th></th>-->
+        <!--                <th>Vendor</th>-->
+        <!--                <th></th>-->
+        <!--                <th>Delivery date</th>-->
+        <!--                <th>Warehouse number</th>-->
+        <!--                <th></th>-->
+        <!--                <th></th>-->
+        <!--            </tr>-->
+        <!--            </tfoot>-->
+    </table>
 
-    </div>
+</div>
 
 
-    <script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}"></script>
 <!--    <script type="text/javascript" th:src="@{/js/dataTables.fixedHeader.min.js}"></script>-->
-    <script type="text/javascript" th:src="@{/js/jquery.dataTables.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.dataTables.min.js}"></script>
 
-    <script type="text/javascript" th:src="@{/js/scripts.js}"></script>
-
-
-
-
+<script type="text/javascript" th:src="@{/js/scripts.js}"></script>
 
 </body>
 </html>
