@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 <title>Edit Product</title>
-	<link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body class="page">
 	<div align="center">
@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<td>Vendor's Phone:</td>
-					<td><input type="text" th:field="*{vendorPhone}"/></td>
+					<td><input type="tel" th:field="*{vendorPhone}" pattern="[0-9]{5}" /></td>
 				</tr>
 				<tr>
 					<td>Delivery Date:</td>
@@ -68,7 +68,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<button type="submit">Save</button>
+						<button type="submit" class="btn btn__save">Save</button>
 					</td>
 				</tr>
 			</table>

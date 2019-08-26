@@ -1,6 +1,7 @@
 .page {
-    background: rgba(212, 228, 239, 1);
-    background: linear-gradient(to right, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+    background: rgb(225, 226, 226);
+    background: linear-gradient(to right, rgb(224, 255, 252) 0%, rgb(255, 213, 158) 100%);
+    max-width: 100%;
 }
 
 .btn {
@@ -38,26 +39,25 @@
     background-color: #1e62d0;
 }
 
-
 .btn__edit{
     box-shadow:3px 4px 0px 0px #fff6af;
-    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
     background-color:#ffec64;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
     border-radius:8px;
     border:1px solid #ffaa22;
     padding:3px 8px;
     text-shadow:0px 1px 0px #ffee66;
-    padding-bottom: 3px;
+    margin-bottom: 7px;
 }
 .btn__edit:hover {
-    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
     background-color:#ffab23;
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
 }
 
 .btn__delete {
     box-shadow: 3px 4px 0px 0px #8a2a21;
-    background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
     background-color: #c62d1f;
+    background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
     border-radius: 8px;
     border: 1px solid #d02718;
     padding:3px 8px;
@@ -65,17 +65,35 @@
 }
 
 .btn__delete:hover {
-    background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
     background-color: #f24437;
+    background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+}
+
+.btn__save {
+    box-shadow: 3px 4px 0px 0px #1e8a29;
+    background-color: #63c67a;
+    background: linear-gradient(to bottom, #34c68e 5%, #84f287 100%);
+    border-radius: 8px;
+    border: 1px solid #36d09e;
+    padding:3px 8px;
+    text-shadow: 0px 1px 0px #2f8107;
+}
+
+.btn__save:hover {
+    background-color: #21f29d;
+    background: linear-gradient(to bottom, #48f2a6 5%, #1ec634 100%);
+
 }
 
 .table-products {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
-    max-width: 90%;
+    width: 98%;
     text-align: center;
     border-collapse: collapse;
     padding: 20px;
+    margin: 20px auto;
+    table-layout: auto;
 }
 
 .table-products td, .table-products th {
@@ -92,8 +110,8 @@
 }
 
 .table-products thead {
-    background: #1C6EA4;
-    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: #5ab7f5;
+    background: linear-gradient(to bottom, #c6dbe8 0%, #3e7ea9 66%, #5d86a0 100%);
     border-bottom: 2px solid #444444;
 }
 
@@ -102,8 +120,51 @@
     font-weight: bold;
     color: #FFFFFF;
     border-left: 2px solid #D0E4F5;
+    padding-right: 8px;
 }
 
 .table-products thead th:first-child {
     border-left: none;
+}
+.table-products thead th {
+    width: calc(100% / 15);
+}
+.table-products thead th input{
+    width: 80%;
+}
+.table-products .sorting_asc,
+.table-products .sorting_desc,
+.table-products .sorting {
+    cursor: pointer;
+    *cursor: hand;
+}
+.table-products .sorting {
+    background: url("/images/sort_both.png") no-repeat center right;
+}
+.table-products .sorting_asc {
+    background: url("/images/sort_asc.png") no-repeat center right;
+}
+.table-products .sorting_desc {
+    background: url("/images/sort_desc.png") no-repeat center right;
+}
+.dataTables_paginate{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.dataTables_paginate a:not(:last-child) {
+    margin-right: 10px;
+}
+.paginate_button{
+    cursor: pointer;
+}
+
+span .paginate_button {
+    background-color: #1e8a29;
+    color: white;
+    padding: 4px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+.paginate_button:hover{
+    background-color: #18ba8e;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create new product</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body class="page">
 <div align="center">
@@ -14,55 +14,55 @@
         <table class="table-products">
             <tr>
                 <td>Product Name:</td>
-                <td><input type="text" th:field="*{name}"/></td>
+                <td><input type="text" th:field="*{name}" pattern="[a-zA-Z0-9\s]{0,16}" maxLength='16' th:value="Product" required /></td>
             </tr>
             <tr>
                 <td>Category:</td>
-                <td><input type="text" th:field="*{category}"/></td>
+                <td><input type="text" th:field="*{category}" required /></td>
             </tr>
             <tr>
                 <td>Date Of Manufacture:</td>
-                <td><input type="date" th:field="*{dateOfManufacture}"/></td>
+                <td><input type="date" th:field="*{dateOfManufacture}" th:value="2017-06-01" required /></td>
             </tr>
             <tr>
                 <td>Expiration Date:</td>
-                <td><input type="date" th:field="*{expirationDate}"/></td>
+                <td><input type="date" th:field="*{expirationDate}" min="2015-08-15" required /></td>
             </tr>
             <tr>
                 <td>Quantity:</td>
-                <td><input type="number" th:field="*{quantity}"/></td>
+                <td><input type="number" th:field="*{quantity}" min="0" oninput="validity.valid||(value='');" required /></td>
             </tr>
             <tr>
                 <td>price:</td>
-                <td><input type="number" th:field="*{price}"/></td>
+                <td><input type="number" th:field="*{price}" min="0" required /></td>
             </tr>
             <tr>
                 <td>Vendor:</td>
-                <td><input type="text" th:field="*{vendor}"/></td>
+                <td><input type="text" th:field="*{vendor}" required /></td>
             </tr>
             <tr>
                 <td>Vendor's Phone:</td>
-                <td><input type="text" th:field="*{vendorPhone}"/></td>
+                <td><input type="tel" th:field="*{vendorPhone}" pattern="[0-9]{5}"  required /></td>
             </tr>
             <tr>
                 <td>Delivery Date:</td>
-                <td><input type="date" th:field="*{deliveryDate}"/></td>
+                <td><input type="date" th:field="*{deliveryDate}" required /></td>
             </tr>
             <tr>
                 <td>Warehouse Number:</td>
-                <td><input type="number" th:field="*{warehouseNumber}"/></td>
+                <td><input type="number" th:field="*{warehouseNumber}" min="1"  required /></td>
             </tr>
             <tr>
                 <td>Brief Description:</td>
-                <td><input type="text" th:field="*{briefDescription}"/></td>
+                <td><input type="text" th:field="*{briefDescription}" th:value="default" required /></td>
             </tr>
             <tr>
                 <td>Annotation Box:</td>
-                <td><input type="text" th:field="*{annotationBox}"/></td>
+                <td><input type="text" th:field="*{annotationBox}" th:value="default" required /></td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button type="submit">Save</button>
+                    <button type="submit" class="btn btn__save">Save</button>
                 </td>
             </tr>
         </table>
