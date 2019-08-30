@@ -1,6 +1,6 @@
 .page {
-    background: rgb(209, 212, 212);
-    background: linear-gradient(to right, rgb(191, 216, 214) 0%, rgb(208, 196, 185) 100%);
+    background: rgb(53,86,100);
+    /*background: linear-gradient(to right, rgb(53,86,100) 0%, rgb(93, 151, 174) 100%);*/
     max-width: 100%;
 }
 
@@ -89,13 +89,16 @@
 
 .table-products {
     border: 1px solid #1C6EA4;
-    background-color: #EEEEEE;
+    /*background-color: #213e4a;*/
     width: 98%;
     text-align: center;
     border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
     padding: 20px;
     margin: 20px auto;
     table-layout: auto;
+    box-shadow: 0px 0px 9px 2px #abd2eb;
 }
 
 .table-products td, .table-products th {
@@ -112,8 +115,8 @@
 }
 
 .table-products thead {
-    background: #557d98;
-    background: linear-gradient(to bottom, #c6dbe8 0%, #295967 66%, #435d6d 100%);
+    background: #213e4a;
+    background: linear-gradient(to bottom, #213e4a 0%, #213e4a 66%, #213e4a 100%);
     border-bottom: 2px solid #444444;
 }
 
@@ -122,7 +125,7 @@
     font-weight: bold;
     color: #FFFFFF;
     border-left: 2px solid #D0E4F5;
-    padding-right: 8px;
+    padding-right: 20px;
 }
 
 .table-products thead th:first-child {
